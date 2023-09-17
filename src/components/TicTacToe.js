@@ -67,9 +67,9 @@ const TicTacToe = () => {
 
   function checkwin() {
     if (
-      box1 != 0 &&
-      box2 != 0 &&
-      box3 != 0 &&
+      box1 !== 0 &&
+      box2 !== 0 &&
+      box3 !== 0 &&
       box1 === box2 &&
       box2 === box3 &&
       gameEnd === true
@@ -82,9 +82,9 @@ const TicTacToe = () => {
       setgameEnd(false);
       console.log("Win 1st row");
     } else if (
-      box4 != 0 &&
-      box5 != 0 &&
-      box6 != 0 &&
+      box4 !== 0 &&
+      box5 !== 0 &&
+      box6 !== 0 &&
       box4 === box5 &&
       box5 === box6 &&
       gameEnd === true
@@ -97,9 +97,9 @@ const TicTacToe = () => {
       setgameEnd(false);
       console.log("Win 2st row");
     } else if (
-      box7 != 0 &&
-      box8 != 0 &&
-      box9 != 0 &&
+      box7 !== 0 &&
+      box8 !== 0 &&
+      box9 !== 0 &&
       box7 === box8 &&
       box8 === box9 &&
       gameEnd === true
@@ -112,9 +112,9 @@ const TicTacToe = () => {
       setgameEnd(false);
       console.log("Win 3st row");
     } else if (
-      box1 != 0 &&
-      box4 != 0 &&
-      box7 != 0 &&
+      box1 !== 0 &&
+      box4 !== 0 &&
+      box7 !== 0 &&
       box1 === box4 &&
       box4 === box7 &&
       gameEnd === true
@@ -127,9 +127,9 @@ const TicTacToe = () => {
       setgameEnd(false);
       console.log("Win 1st col");
     } else if (
-      box2 != 0 &&
-      box5 != 0 &&
-      box8 != 0 &&
+      box2 !== 0 &&
+      box5 !== 0 &&
+      box8 !== 0 &&
       box2 === box5 &&
       box5 === box8 &&
       gameEnd === true
@@ -142,9 +142,9 @@ const TicTacToe = () => {
       setgameEnd(false);
       console.log("Win 2st col");
     } else if (
-      box3 != 0 &&
-      box6 != 0 &&
-      box9 != 0 &&
+      box3 !== 0 &&
+      box6 !== 0 &&
+      box9 !== 0 &&
       box3 === box6 &&
       box6 === box9 &&
       gameEnd === true
@@ -157,9 +157,9 @@ const TicTacToe = () => {
       setgameEnd(false);
       console.log("Win 3st rocolw");
     } else if (
-      box1 != 0 &&
-      box5 != 0 &&
-      box9 != 0 &&
+      box1 !== 0 &&
+      box5 !== 0 &&
+      box9 !== 0 &&
       box1 === box5 &&
       box5 === box9 &&
       gameEnd === true
@@ -172,9 +172,9 @@ const TicTacToe = () => {
       setgameEnd(false);
       console.log("dia");
     } else if (
-      box3 != 0 &&
-      box5 != 0 &&
-      box7 != 0 &&
+      box3 !== 0 &&
+      box5 !== 0 &&
+      box7 !== 0 &&
       box3 === box5 &&
       box5 === box7 &&
       gameEnd === true
@@ -776,7 +776,7 @@ const TicTacToe = () => {
           </div>
         )}
 
-        {user1 != 0 && user2 != 0 && mode === 1 ? (
+        {user1 !== 0 && user2 !== 0 && mode === 1 ? (
           <>
             <div className="game-container">
               <div
