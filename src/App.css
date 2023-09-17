@@ -36,3 +36,196 @@
     transform: rotate(360deg);
   }
 }
+
+/* ---------------------------------------- */
+
+@font-face {
+  font-family: squidgame;
+  src: url(./assets/font/Squid-Game/font/Game\ Of\ Squids.ttf);
+}
+p {
+  font-family: squidgame;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  /* background-color: #072e33; */
+  /* box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15); */
+  background-color: #05161a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* box-shadow: 0 2px 2px 8px #0c7075; */
+}
+
+.body-container {
+  width: 100%;
+  /* height: calc(100vh - 70px); */
+  height: 1000px;
+  background-color: #05161a;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 45px;
+  font-family: squidgame;
+}
+.header-one {
+  font-family: squidgame;
+  color: #0f9690;
+  font-size: 80px;
+  height: 48px;
+  text-shadow: 2px 2px 8px #0c7075;
+  transition: 4s;
+  /* text-shadow: 2px 2px #0c7075;*/
+}
+.header-two {
+  font-family: squidgame;
+  color: white;
+  font-size: 50px;
+  letter-spacing: 10px;
+  height: 40px;
+  margin-top: -24px;
+  text-shadow: 2px 2px 6px #126f73;
+}
+.box {
+  border: 3px solid #0f9690;
+  margin: 4px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  box-shadow: 0px 0px 8px #0c7075;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: squidgame;
+  cursor: pointer;
+}
+
+span {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconselect {
+  color: white;
+  font-family: squidgame;
+  height: 30px;
+}
+.userone {
+  width: 210px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  color: white;
+  font-family: squidgame;
+  /* text-shadow: 2px 2px 8px #0c7075; */
+  align-items: center;
+  /* justify-content: center; */
+  /* text-shadow: 2px 2px 8px #0c7075; */
+}
+.usertwo {
+  width: 210px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  color: white;
+  font-family: squidgame;
+  /* text-shadow: 2px 2px 8px #0c7075; */
+  align-items: center;
+  /* justify-content: center; */
+}
+.selecticon {
+  font-size: 18px;
+  margin: 0px 5px;
+  cursor: pointer;
+  color: white;
+}
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: squidgame;
+  margin-top: 60px;
+}
+.line-b {
+  transition: 0.6s;
+  border: 2px solid white;
+  height: 0px;
+  width: 0px;
+  margin-left: -198px;
+  transition: 0.6s ease-in;
+}
+.line-a {
+  transition: 3s ease;
+  border: 2px solid white;
+  height: 0px;
+  width: 200px;
+  margin-left: -198px;
+}
+.indicator {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #0f9690;
+  border-radius: 50%;
+  margin: 0px 15px;
+  transition: 0.3s;
+}
+
+.active {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #0f9690;
+  border-radius: 50%;
+  margin: 0px 15px;
+  background-color: #0cfff4;
+  box-shadow: 0px 0px 8px #0c7075;
+  transition: 0.3s;
+}
+button {
+  font-family: squidgame;
+  width: 180px;
+  height: 45px;
+  border: 3px solid #0f9690;
+  box-shadow: 0px 0px 8px #0c7075;
+  background: white;
+  color: rgb(0, 0, 0);
+  transition: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0f9690;
+  color: white;
+  transition: 0.4s;
+}
+.resultcontainer {
+  font-family: squidgame;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.winperson {
+  font-size: 20px;
+  z-index: 1;
+  margin-top: -65px;
+  letter-spacing: -1px;
+  color: rgb(255 255 255);
+  text-shadow: 2px 2px 6px #126f73;
+}
+.win {
+  font-size: 55px;
+  color: #0f9690;
+  text-shadow: 2px 2px 6px #126f73;
+}
