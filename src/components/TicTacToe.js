@@ -8,6 +8,9 @@ import { MdAccountCircle } from "react-icons/md";
 import { PiSunDimFill } from "react-icons/pi";
 import { MdDarkMode } from "react-icons/md";
 import { GiSelect } from "react-icons/gi";
+import { BiLogoInstagram } from "react-icons/bi";
+import { BiLogoFacebookSquare } from "react-icons/bi";
+import { FaTwitterSquare } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -373,165 +376,78 @@ const TicTacToe = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div className="h-[70px] w-full bg-[#05161a] flex justify-between items-center">
         {sidebar === false ? (
           <RxHamburgerMenu
             onClick={() => toggleSidebar()}
-            style={{
-              fontSize: "30px",
-              color: "white",
-              marginLeft: "25px",
-              cursor: "pointer",
-              zIndex: "3",
-            }}
+            className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]"
           />
         ) : (
           <RxCross2
             onClick={() => toggleSidebar()}
-            style={{
-              fontSize: "30px",
-              color: "white",
-              marginLeft: "25px",
-              cursor: "pointer",
-              zIndex: "3",
-            }}
+            className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]"
           />
         )}
-        <div>
-          <MdAccountCircle
-            style={{
-              fontSize: "30px",
-              color: "white",
-              marginLeft: "25px",
-              cursor: "pointer",
-              zIndex: "3",
-            }}
-          />
-          <MdDarkMode
-            style={{
-              fontSize: "30px",
-              color: "white",
-              marginLeft: "25px",
-              cursor: "pointer",
-              zIndex: "3",
-            }}
-          />
-          <PiSunDimFill
-            style={{
-              fontSize: "30px",
-              color: "white",
-              marginLeft: "25px",
-              marginRight: "25px",
-              cursor: "pointer",
-              zIndex: "3",
-            }}
-          />
+        <div className="flex">
+          <MdAccountCircle className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]" />
+          <MdDarkMode className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]" />
+          <PiSunDimFill className="text-[20px] lg:text-[30px] text-white ml-[25px] mr-[25px] cursor-pointer z-[3]" />
         </div>
       </div>
       {sidebar === false ? (
-        <div
-          style={{
-            width: "0px",
-            height: "100vh",
-            backgroundColor: "#072e33",
-            position: "fixed",
-            transition: ".5s",
-            marginTop: "-70px",
-            zIndex: "1",
-          }}
-        ></div>
+        <div className="w-0 h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1]"></div>
       ) : (
-        <div
-          style={{
-            width: "250px",
-            height: "100vh",
-            backgroundColor: "#072e33",
-            position: "fixed",
-            transition: ".5s",
-            marginTop: "-70px",
-            zIndex: "1",
-          }}
-        ></div>
+        <div className="w-[250px] h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1]"></div>
       )}
-      <div className="body-container">
-        <div className="header">
-          <span className="header-one">welcome to</span>
-          <span className="header-two">tic tac toe</span>
+      <div
+        className="w-full  bg-[#05161a]"
+        style={{ height: "calc(100vh - 70px)" }}
+      >
+        <div className="font-['squidgame'] pt-[45px] flex flex-col items-center justify-center">
+          <span className="text-[40px]  lg:text-[80px]  text-[#0f9690] h-[48px] drop-shadow-[2px_2px_3px_#0c7075] font-['squidgame']">
+            welcome to
+          </span>
+          <span className="lg:text-[50px] sm:text-[40px] text-[#ffffff] drop-shadow-[2px_2px_3px_#0c7075] font-['squidgame'] h-[40px] mt-[-34px] lg:mt-[-24px] tracking-[7px]  lg:tracking-[10px]  ">
+            tic tac toe
+          </span>
         </div>
 
-        <div className="header">
-          <span
-            style={{
-              color: "white",
-              textShadow: "2px 2px 8px #0c7075",
-              color: "#0f9690",
-              fontSize: "23px",
-            }}
-          >
+        <div className="font-['squidgame'] pt-[45px] flex flex-col items-center justify-center">
+          <span className="text-[#0f9690] drop-shadow-[2px_2px_3px_#0c7075] text-[20px] lg:text-[23px]">
             game mode
           </span>
-          <span style={{ color: "white" }}>
+          <span className="text-white">
             <span
               onClick={() => modeF()}
-              style={{
-                width: "85px",
-                margin: "0px 10px ",
-                cursor: "pointer",
-                fontSize: "16px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textShadow: "2px 2px 8px #0c7075",
-              }}
+              className="w-[85px] mx-[10px] cursor-pointer flex flex-col items-center drop-shadow-[2px_2px_3px_#0c7075] text-[14px] lg:text-[16px]"
             >
               friend
               {mode === 1 ? (
                 <span
-                  style={{
-                    width: "40px",
-                    borderBottom: "2px solid #0f9690",
-                    transition: ".4s",
-                  }}
+                  style={{ transition: ".4s" }}
+                  className="w-[40px] border-b-[2px] border-[#0f9690] "
                 ></span>
               ) : (
                 <span
-                  style={{
-                    width: "0px",
-                    borderBottom: "2px solid #0f9690",
-                    transition: ".4s",
-                  }}
+                  style={{ transition: ".4s" }}
+                  className="w-0 border-b-[2px] border-[#0f9690] "
                 ></span>
               )}
             </span>
             <span
               onClick={() => modeO()}
-              style={{
-                width: "85px",
-                margin: "0px 10px ",
-                cursor: "pointer",
-                fontSize: "16px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textShadow: "2px 2px 8px #0c7075",
-              }}
+              className="w-[85px] mx-10px cursor-pointer text-[14px] lg:text-[16px] flex flex-col items-center drop-shadow-[2px_2px_3px_#0c7075]"
             >
               online
               {mode === 2 ? (
                 <span
-                  style={{
-                    width: "40px",
-                    borderBottom: "2px solid #0f9690",
-                    transition: ".4s",
-                  }}
+                  className="w-[40px] border-b-[2px] border-[#0f9690] "
+                  style={{ transition: ".4s" }}
                 ></span>
               ) : (
                 <span
-                  style={{
-                    width: "0px",
-                    borderBottom: "2px solid #0f9690",
-                    transition: ".4s",
-                  }}
+                  className="w-0 border-b-[2px] border-[#0f9690] "
+                  style={{ transition: ".4s" }}
                 ></span>
               )}
             </span>
@@ -539,53 +455,36 @@ const TicTacToe = () => {
         </div>
 
         {mode === 1 ? (
-          <div className="header" style={{ paddingTop: "20px" }}>
-            <span className="iconselect">
+          <div className="font-['squidgame']  flex flex-col items-center justify-center pt-[20px]">
+            <span className=" h-[30px] text-white font-['squidgame'] flex justify-center items-center">
               {userToggle === 0 ? (
                 <></>
               ) : userToggle === 1 ? (
-                <span
-                  className="userone"
-                  style={{ fontSize: "16px", color: "#0f9690" }}
-                >
+                <span className="font-['squidgame'] w-[198px] flex justify-end items-center pr-[10px] lg:pr-[20px] text-[#0f9690] text-[14px] lg:text-[16px]">
                   user 1 :{" "}
                   {user1 === 0 ? (
                     <>
                       {user2 === 1 ? (
-                        <RiTriangleLine
-                          className="selecticon"
-                          style={{
-                            marginLeft: "10px",
-                            color: "#888888",
-                            cursor: "default",
-                          }}
-                        />
+                        <RiTriangleLine className="text[18px] mx-[5px]  ml-[10px] text-[#888888] cursor-default" />
                       ) : (
                         <RiTriangleLine
-                          className="selecticon"
+                          className="text[18px] mx-[5px] cursor-pointer text-white ml-[10px]"
                           onClick={() => User1(1)}
-                          style={{ marginLeft: "10px" }}
                         />
                       )}{" "}
                       {user2 === 2 ? (
-                        <FaRegCircle
-                          className="selecticon"
-                          style={{ color: "#888888", cursor: "default" }}
-                        />
+                        <FaRegCircle className="text[18px] mx-[5px]   text-[#888888] cursor-default" />
                       ) : (
                         <FaRegCircle
-                          className="selecticon"
+                          className="text[18px] mx-[5px] cursor-pointer text-white"
                           onClick={() => User1(2)}
                         />
                       )}{" "}
                       {user2 === 3 ? (
-                        <BiSquare
-                          className="selecticon"
-                          style={{ color: "#888888", cursor: "default" }}
-                        />
+                        <BiSquare className="text[18px] mx-[5px]   text-[#888888] cursor-default" />
                       ) : (
                         <BiSquare
-                          className="selecticon"
+                          className="text[18px] mx-[5px] cursor-pointer text-white"
                           onClick={() => User1(3)}
                         />
                       )}
@@ -593,50 +492,24 @@ const TicTacToe = () => {
                   ) : user1 === 1 ? (
                     <>
                       <RiTriangleLine
-                        className="selecticon"
+                        className="text[18px] mx-[5px] cursor-pointer text-white"
                         style={{ marginLeft: "10px" }}
                       />{" "}
-                      <FaRegCircle
-                        className="selecticon"
-                        style={{ color: "#888888", cursor: "default" }}
-                      />{" "}
-                      <BiSquare
-                        className="selecticon"
-                        style={{ color: "#888888", cursor: "default" }}
-                      />
+                      <FaRegCircle className="text[18px] mx-[5px]   text-[#888888] cursor-default" />{" "}
+                      <BiSquare className="text[18px] mx-[5px]   text-[#888888] cursor-default" />
                     </>
                   ) : user1 === 2 ? (
                     <>
-                      <RiTriangleLine
-                        className="selecticon"
-                        style={{
-                          color: "#888888",
-                          cursor: "default",
-                          marginLeft: "10px",
-                        }}
-                      />{" "}
-                      <FaRegCircle className="selecticon" />{" "}
-                      <BiSquare
-                        className="selecticon"
-                        style={{ color: "#888888", cursor: "default" }}
-                      />
+                      <RiTriangleLine className="text[18px] mx-[5px]  ml-[10px] text-[#888888] cursor-default" />{" "}
+                      <FaRegCircle className="text[18px] mx-[5px] cursor-pointer text-white" />{" "}
+                      <BiSquare className="text[18px] mx-[5px]    text-[#888888] cursor-default" />
                     </>
                   ) : (
                     <>
-                      <RiTriangleLine
-                        className="selecticon"
-                        style={{
-                          color: "#888888",
-                          cursor: "default",
-                          marginLeft: "10px",
-                        }}
-                      />{" "}
-                      <FaRegCircle
-                        className="selecticon"
-                        style={{ color: "#888888", cursor: "default" }}
-                      />{" "}
+                      <RiTriangleLine className="text[18px] mx-[5px] ml-[10px] text-[#888888] cursor-default" />{" "}
+                      <FaRegCircle className="text[18px] mx-[5px]  text-[#888888] cursor-default" />{" "}
                       <BiSquare
-                        className="selecticon"
+                        className="text[18px] mx-[5px] cursor-pointer text-white"
                         onClick={() => User1(3)}
                       />
                     </>
@@ -646,8 +519,8 @@ const TicTacToe = () => {
                 <></>
               )}
               <GiSelect
+                className="text-[#0f9690] cursor-pointer "
                 onClick={() => toggleIconSelect()}
-                style={{ color: "#0f9690", cursor: "pointer" }}
               />
               {userToggle === 0 ? (
                 <>
@@ -658,107 +531,64 @@ const TicTacToe = () => {
                 </>
               ) : userToggle === 1 ? (
                 <span
-                  className="usertwo"
+                  className="font-['squidgame'] w-[198px] flex justify-start items-center pl-[10px] lg:pl-[20px] text-[#0f9690] text-[14px] lg:text-[16px] "
                   style={{
-                    fontSize: "16px",
-                    color: "#0f9690",
                     transition: ".4s",
                   }}
                 >
                   {user2 === 0 ? (
                     <>
                       {user1 === 3 ? (
-                        <BiSquare
-                          className="selecticon"
-                          style={{ color: "#888888", cursor: "default" }}
-                        />
+                        <BiSquare className="text[18px] mx-[5px]  text-[#888888] cursor-default" />
                       ) : (
                         <BiSquare
-                          className="selecticon"
+                          className="text[18px] mx-[5px] cursor-pointer text-white"
                           onClick={() => User2(3)}
                         />
                       )}{" "}
                       {user1 === 2 ? (
-                        <FaRegCircle
-                          style={{ color: "#888888", cursor: "default" }}
-                          className="selecticon"
-                        />
+                        <FaRegCircle className="text[18px] mx-[5px]  text-[#888888] cursor-default" />
                       ) : (
                         <FaRegCircle
-                          className="selecticon"
+                          className="text[18px] mx-[5px] cursor-pointer text-white"
                           onClick={() => User2(2)}
                         />
                       )}{" "}
                       {user1 === 1 ? (
-                        <RiTriangleLine
-                          style={{
-                            color: "#888888",
-                            cursor: "default",
-                            marginRight: "10px",
-                          }}
-                          className="selecticon"
-                        />
+                        <RiTriangleLine className="text[18px] mx-[5px]   mr-[10px] text-[#888888] cursor-default" />
                       ) : (
                         <RiTriangleLine
-                          style={{
-                            marginRight: "10px",
-                          }}
-                          className="selecticon"
+                          className="text[18px] mx-[5px] cursor-pointer text-white mr-[10px]"
                           onClick={() => User2(1)}
                         />
                       )}
                     </>
                   ) : user2 === 1 ? (
                     <>
-                      <BiSquare
-                        style={{ color: "#888888", cursor: "default" }}
-                        className="selecticon"
-                      />{" "}
-                      <FaRegCircle
-                        style={{ color: "#888888", cursor: "default" }}
-                        className="selecticon"
-                      />{" "}
+                      <BiSquare className="text[18px] mx-[5px]    text-[#888888] cursor-default" />{" "}
+                      <FaRegCircle className="text[18px] mx-[5px]   text-[#888888] cursor-default" />{" "}
                       <RiTriangleLine
-                        style={{
-                          marginRight: "10px",
-                        }}
-                        className="selecticon"
+                        className="text[18px] mx-[5px] cursor-pointer text-white mr-[10px]"
                         onClick={() => User2(1)}
                       />
                     </>
                   ) : user2 === 2 ? (
                     <>
-                      <BiSquare
-                        style={{ color: "#888888", cursor: "default" }}
-                        className="selecticon"
-                      />{" "}
+                      <BiSquare className="text[18px] mx-[5px]   text-[#888888] cursor-default" />{" "}
                       <FaRegCircle
-                        className="selecticon"
+                        className="text[18px] mx-[5px] cursor-pointer text-white"
                         onClick={() => User2(2)}
                       />{" "}
-                      <RiTriangleLine
-                        style={{
-                          color: "#888888",
-                          cursor: "default",
-                          marginRight: "10px",
-                        }}
-                        className="selecticon"
-                      />
+                      <RiTriangleLine className="text[18px] mx-[5px]   mr-[10px] text-[#888888] cursor-default" />
                     </>
                   ) : (
                     <>
                       <BiSquare
-                        className="selecticon"
+                        className="text[18px] mx-[5px] cursor-pointer text-white"
                         onClick={() => User2(3)}
                       />{" "}
-                      <FaRegCircle
-                        style={{ color: "#888888", cursor: "default" }}
-                        className="selecticon"
-                      />{" "}
-                      <RiTriangleLine
-                        style={{ color: "#888888", cursor: "default" }}
-                        className="selecticon"
-                      />
+                      <FaRegCircle className="text[18px]  text[18px] mx-[5px] text-[#888888] cursor-default" />{" "}
+                      <RiTriangleLine className="text[18px] mx-[5px]   text-[#888888] cursor-default" />
                     </>
                   )}
                   {/* ----------------------- */} : user 2
@@ -769,8 +599,11 @@ const TicTacToe = () => {
             </span>
           </div>
         ) : (
-          <div className="header" style={{ paddingTop: "20px" }}>
-            <div className="iconselect" style={{ color: "red" }}>
+          <div
+            className="font-['squidgame'] pt-[45px] flex flex-col items-center justify-center"
+            style={{ paddingTop: "20px" }}
+          >
+            <div className="font-['squidgame'] h-[30px] text-red-400">
               in development process
             </div>
           </div>
@@ -778,16 +611,8 @@ const TicTacToe = () => {
 
         {user1 !== 0 && user2 !== 0 && mode === 1 ? (
           <>
-            <div className="game-container">
-              <div
-                style={{
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  width: "140px",
-                  justifyContent: "flex-end",
-                }}
-              >
+            <div className="font-['squidgame'] flex justify-center items-center text-white mt-[60px]">
+              <div className="text-white w-[122px] flex justify-end items-center text-[14px] lg:text-[16px]">
                 user 1
                 {/* {user1 === 1 ? (
               <RiTriangleLine />
@@ -797,14 +622,24 @@ const TicTacToe = () => {
               <BiSquare />
             )} */}
                 {gameUserToggle === 1 ? (
-                  <div className="active"></div>
+                  <div
+                    className="w-[10px] h-[10px] border-[2px] border-[#0f9690] rounded-full mx-[10px] lg:mx[15px] bg-[#0cfff4] shadow-[0px 0px 8px #0c7075]"
+                    style={{ transition: ".5s" }}
+                  ></div>
                 ) : (
-                  <div className="indicator"></div>
+                  <div
+                    className="w-[10px] h-[10px] border-[2px] border-[#0f9690] rounded-full mx-[10px] lg:mx[15px] shadow-[0px 0px 8px #0c7075]"
+                    style={{ transition: ".5s" }}
+                  ></div>
                 )}
               </div>
-              <div className="game-subcontainer">
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <div className="box" id="box1" onClick={() => toggle1()}>
+              <div className="">
+                <div className="flex justify-center items-center">
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box1"
+                    onClick={() => toggle1()}
+                  >
                     {box1 === 0 ? (
                       <></>
                     ) : box1 === 1 ? (
@@ -835,7 +670,11 @@ const TicTacToe = () => {
                       </span>
                     )}
                   </div>
-                  <div className="box" id="box2" onClick={() => toggle2()}>
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box2"
+                    onClick={() => toggle2()}
+                  >
                     {box2 === 0 ? (
                       <></>
                     ) : box2 === 1 ? (
@@ -866,7 +705,11 @@ const TicTacToe = () => {
                       </span>
                     )}
                   </div>
-                  <div className="box" id="box3" onClick={() => toggle3()}>
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box3"
+                    onClick={() => toggle3()}
+                  >
                     {box3 === 0 ? (
                       <></>
                     ) : box3 === 1 ? (
@@ -898,8 +741,12 @@ const TicTacToe = () => {
                     )}
                   </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <div className="box" id="box4" onClick={() => toggle4()}>
+                <div className="flex justify-center items-center">
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box4"
+                    onClick={() => toggle4()}
+                  >
                     {box4 === 0 ? (
                       <></>
                     ) : box4 === 1 ? (
@@ -930,7 +777,11 @@ const TicTacToe = () => {
                       </span>
                     )}
                   </div>
-                  <div className="box" id="box5" onClick={() => toggle5()}>
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box5"
+                    onClick={() => toggle5()}
+                  >
                     {box5 === 0 ? (
                       <></>
                     ) : box5 === 1 ? (
@@ -961,7 +812,11 @@ const TicTacToe = () => {
                       </span>
                     )}
                   </div>
-                  <div className="box" id="box6" onClick={() => toggle6()}>
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box6"
+                    onClick={() => toggle6()}
+                  >
                     {box6 === 0 ? (
                       <></>
                     ) : box6 === 1 ? (
@@ -993,8 +848,12 @@ const TicTacToe = () => {
                     )}
                   </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <div className="box" id="box7" onClick={() => toggle7()}>
+                <div className="flex justify-center items-center">
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box7"
+                    onClick={() => toggle7()}
+                  >
                     {box7 === 0 ? (
                       <></>
                     ) : box7 === 1 ? (
@@ -1025,7 +884,11 @@ const TicTacToe = () => {
                       </span>
                     )}
                   </div>
-                  <div className="box" id="box8" onClick={() => toggle8()}>
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box8"
+                    onClick={() => toggle8()}
+                  >
                     {box8 === 0 ? (
                       <></>
                     ) : box8 === 1 ? (
@@ -1056,7 +919,11 @@ const TicTacToe = () => {
                       </span>
                     )}
                   </div>
-                  <div className="box" id="box9" onClick={() => toggle9()}>
+                  <div
+                    className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
+                    id="box9"
+                    onClick={() => toggle9()}
+                  >
                     {box9 === 0 ? (
                       <></>
                     ) : box9 === 1 ? (
@@ -1089,147 +956,73 @@ const TicTacToe = () => {
                   </div>
                 </div>
               </div>
-              <div
-                style={{
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  width: "140px",
-                  justifyContent: "flex-start",
-                }}
-              >
+              <div className="text-white w-[122px] flex justify-start items-center text-[14px] lg:text-[16px]">
                 {gameUserToggle === 2 ? (
-                  <div className="active"></div>
+                  <div
+                    className="w-[10px] h-[10px] border-[2px] border-[#0f9690] rounded-full mx-[10px] lg:mx[15px] bg-[#0cfff4] shadow-[0px 0px 8px #0c7075]"
+                    style={{ transition: ".5s" }}
+                  ></div>
                 ) : (
-                  <div className="indicator"></div>
+                  <div
+                    className="w-[10px] h-[10px] border-[2px] border-[#0f9690] rounded-full mx-[10px] lg:mx[15px]  shadow-[0px 0px 8px #0c7075]"
+                    style={{ transition: ".5s" }}
+                  ></div>
                 )}
                 user 2
-                {/* {user2 === 1 ? (
-              <RiTriangleLine />
-            ) : user2 === 2 ? (
-              <FaRegCircle />
-            ) : (
-              <BiSquare />
-            )} */}
               </div>
             </div>
-            {/* <div className="resultcontainer">
-              <div
-                style={{
-                  width: "300px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <span>user 1 </span>
-                <div
-                  style={{
-                    width: "30px",
-                    height: "10px",
-                    border: "2px solid #0f9690",
-                    borderRadius: "40px",
-                    margin: "0px 20px",
-                  }}
-                ></div>
-              </div>
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  border: "2px solid #0f9690",
-                  borderRadius: "40px",
-                }}
-              ></div>
-              <div
-                style={{
-                  width: "300px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    width: "30px",
-                    height: "10px",
-                    border: "2px solid #0f9690",
-                    borderRadius: "40px",
-                    margin: "0px 20px",
-                  }}
-                ></div>
-                <span> user 2</span>
-              </div>
-            </div> */}
-            {/* <div>
-              {gameEnd === true && stepFlag >= 8 ? (
-                <>
-                  <p style={{ color: "white" }}>Draw</p>
-                </>
-              ) : (
-                <p style={{ color: "white" }}>Game Won</p>
-              )}
-            </div> */}
-            {/* <div>
-              {gameEnd === false ? (<p style={{ color: "white" }}>Draw</p>) : (gameEnd === true && )}
-            </div> */}
+
             <div>
               {gameEnd === true && stepFlag <= 8 ? (
                 <>
-                  <p
-                    style={{
-                      color: "white",
-                      marginTop: "-3px",
-                      height: "80px",
-                    }}
-                  ></p>
+                  <p className="text-[white] mt-[-3px] h-[80px]"></p>
                 </>
               ) : gameEnd === true && stepFlag > 8 ? (
-                <p
-                  style={{ color: "white", marginTop: "-3px", height: "80px" }}
-                >
-                  <span className="win">draw</span>{" "}
-                  <span className="winperson">user 1 &nbsp; user 2</span>
+                <p className="text-[white] mt-[-3px] h-[80px]">
+                  <span className="text-[50px] lg:text-[55px] text-[#0f9690] drop-shadow-[2px_2px_3px_#0c7075]">
+                    draw
+                  </span>{" "}
+                  <span className="text-[20px] mt-[-52px] lg:mt-[-57px] z-[1] tracking-[-1px] text-white drop-shadow-[2px_2px_3px_#0c7075]">
+                    user 1 &nbsp; user 2
+                  </span>
                 </p>
               ) : winner === 0 ? (
                 <>
-                  <p
-                    style={{
-                      color: "white",
-                      marginTop: "-3px",
-                      height: "80px",
-                    }}
-                  ></p>
+                  <p className="text-[white] mt-[-3px] h-[80px]"></p>
                 </>
               ) : winner === 1 ? (
-                <p
-                  style={{ color: "white", marginTop: "-3px", height: "80px" }}
-                >
-                  <span className="win">won</span>{" "}
-                  <span className="winperson">user 1</span>
+                <p className="text-[white] mt-[-3px] h-[80px]">
+                  <span className="text-[50px] lg:text-[55px] text-[#0f9690] drop-shadow-[2px_2px_3px_#0c7075]">
+                    won
+                  </span>{" "}
+                  <span className="text-[20px] mt-[-52px] lg:mt-[-57px] z-[1] tracking-[-1px] text-white drop-shadow-[2px_2px_3px_#0c7075]">
+                    user 1
+                  </span>
                 </p>
               ) : (
-                <p
-                  style={{ color: "white", marginTop: "-3px", height: "80px" }}
-                >
-                  <span className="win">won</span>{" "}
-                  <span className="winperson">user 2</span>
+                <p className="text-[white] mt-[-3px] h-[80px]">
+                  <span className="text-[50px] lg:text-[55px] text-[#0f9690] drop-shadow-[2px_2px_3px_#0c7075]">
+                    won
+                  </span>{" "}
+                  <span className="text-[20px] mt-[-52px] lg:mt-[-57px] z-[1] tracking-[-1px] text-white drop-shadow-[2px_2px_3px_#0c7075]">
+                    user 2
+                  </span>
                 </p>
               )}
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "100%",
-                marginTop: "25px",
-              }}
-            >
+            <div className="flex justify-center items-center w-full mt-[25px]">
               {gameEnd === true ? (
-                <button onClick={() => reset()}>restart</button>
+                <button
+                  className="font-['squidgame'] w-[180px] h-[45px] border-[3px] border-[#0f9690] bg-white text-[black] cursor-pointer hover:bg-[#0f9690] hover:text-[white] "
+                  style={{ transition: ".4s" }}
+                  onClick={() => reset()}
+                >
+                  restart
+                </button>
               ) : (
                 <button
+                  className="font-['squidgame'] w-[180px] h-[45px] border-[3px] border-[#0f9690] bg-white text-[black] cursor-pointer  "
+                  style={{ transition: ".4s" }}
                   onClick={() => {
                     reset();
                     setgameEnd(true);
@@ -1241,9 +1034,17 @@ const TicTacToe = () => {
             </div>
           </>
         ) : (
-          <div className="game-container"></div>
+          <div className="font-['squidgame'] flex justify-center items-center text-white mt-[60px]"></div>
         )}
+
+        <div className="flex justify-center items-center w-full mt-[25px]">
+          <BiLogoInstagram className="text-[white] text-[25px] lg:text-[30px] mx-[10px]" />
+          <BiLogoFacebookSquare className="text-[white] text-[24px] lg:text-[28px] mx-[10px]" />
+          <FaTwitterSquare className="text-[white] text-[22px] lg:text-[26px] mx-[10px]" />
+          {/* <FaSquareXTwitter /> */}
+        </div>
       </div>
+
       {/* <div
         className=""
         style={{

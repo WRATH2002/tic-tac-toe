@@ -1,44 +1,12 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ---------------------------------------- */
-
+* {
+  padding: 0;
+  margin: 0;
+}
 @font-face {
   font-family: squidgame;
   src: url(./assets/font/Squid-Game/font/Game\ Of\ Squids.ttf);
@@ -61,8 +29,8 @@ p {
 
 .body-container {
   width: 100%;
-  /* height: calc(100vh - 70px); */
-  height: 1000px;
+  height: calc(100vh - 70px);
+  /* height: 1000px;*/
   background-color: #05161a;
 }
 .header {
@@ -74,39 +42,7 @@ p {
   padding-top: 45px;
   font-family: squidgame;
 }
-.header-one {
-  font-family: squidgame;
-  color: #0f9690;
-  font-size: 80px;
-  height: 48px;
-  text-shadow: 2px 2px 8px #0c7075;
-  transition: 4s;
-  /* text-shadow: 2px 2px #0c7075;*/
-}
-.header-two {
-  font-family: squidgame;
-  color: white;
-  font-size: 50px;
-  letter-spacing: 10px;
-  height: 40px;
-  margin-top: -24px;
-  text-shadow: 2px 2px 6px #126f73;
-}
-.box {
-  border: 3px solid #0f9690;
-  margin: 4px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  box-shadow: 0px 0px 8px #0c7075;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: squidgame;
-  cursor: pointer;
-}
+/* .header-one  */
 
 span {
   font-size: 20px;
@@ -114,48 +50,7 @@ span {
   align-items: center;
   justify-content: center;
 }
-.iconselect {
-  color: white;
-  font-family: squidgame;
-  height: 30px;
-}
-.userone {
-  width: 210px;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
-  color: white;
-  font-family: squidgame;
-  /* text-shadow: 2px 2px 8px #0c7075; */
-  align-items: center;
-  /* justify-content: center; */
-  /* text-shadow: 2px 2px 8px #0c7075; */
-}
-.usertwo {
-  width: 210px;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 20px;
-  color: white;
-  font-family: squidgame;
-  /* text-shadow: 2px 2px 8px #0c7075; */
-  align-items: center;
-  /* justify-content: center; */
-}
-.selecticon {
-  font-size: 18px;
-  margin: 0px 5px;
-  cursor: pointer;
-  color: white;
-}
-.game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: squidgame;
-  margin-top: 60px;
-}
+
 .line-b {
   transition: 0.6s;
   border: 2px solid white;
@@ -171,41 +66,7 @@ span {
   width: 200px;
   margin-left: -198px;
 }
-.indicator {
-  width: 10px;
-  height: 10px;
-  border: 2px solid #0f9690;
-  border-radius: 50%;
-  margin: 0px 15px;
-  transition: 0.3s;
-}
 
-.active {
-  width: 10px;
-  height: 10px;
-  border: 2px solid #0f9690;
-  border-radius: 50%;
-  margin: 0px 15px;
-  background-color: #0cfff4;
-  box-shadow: 0px 0px 8px #0c7075;
-  transition: 0.3s;
-}
-button {
-  font-family: squidgame;
-  width: 180px;
-  height: 45px;
-  border: 3px solid #0f9690;
-  box-shadow: 0px 0px 8px #0c7075;
-  background: white;
-  color: rgb(0, 0, 0);
-  transition: 0.4s;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #0f9690;
-  color: white;
-  transition: 0.4s;
-}
 .resultcontainer {
   font-family: squidgame;
   color: white;
@@ -214,18 +75,4 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.winperson {
-  font-size: 20px;
-  z-index: 1;
-  margin-top: -65px;
-  letter-spacing: -1px;
-  color: rgb(255 255 255);
-  text-shadow: 2px 2px 6px #126f73;
-}
-.win {
-  font-size: 55px;
-  color: #0f9690;
-  text-shadow: 2px 2px 6px #126f73;
 }
