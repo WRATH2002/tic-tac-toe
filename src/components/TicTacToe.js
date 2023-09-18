@@ -11,6 +11,9 @@ import { GiSelect } from "react-icons/gi";
 import { BiLogoInstagram } from "react-icons/bi";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 import { FaTwitterSquare } from "react-icons/fa";
+import start from "../assets/audio/start.mp3";
+import win from "../assets/audio/win.mp3";
+import draw from "../assets/audio/draw.mp3";
 
 const Navbar = () => {
   return (
@@ -24,6 +27,9 @@ const TicTacToe = () => {
   //
   const [stepFlag, setStepFlag] = useState(0);
 
+  //
+  const [startAudio, setStartAudio] = useState(0);
+
   // For Every box to show icon
   const [box1, setBox1] = useState(0);
   const [box2, setBox2] = useState(0);
@@ -34,6 +40,16 @@ const TicTacToe = () => {
   const [box7, setBox7] = useState(0);
   const [box8, setBox8] = useState(0);
   const [box9, setBox9] = useState(0);
+
+  //
+  const [winbox1, setwinBox1] = useState(0);
+  const [winbox2, setwinBox2] = useState(0);
+  const [winbox3, setwinBox3] = useState(0);
+  const [winbox4, setwinBox4] = useState(0);
+  const [winbox5, setwinBox5] = useState(0);
+  const [winbox6, setwinBox6] = useState(0);
+  const [winbox7, setwinBox7] = useState(0);
+  const [winbox8, setwinBox8] = useState(0);
 
   // To toggle in between users
   const [userToggle, setUserToggle] = useState(0);
@@ -79,8 +95,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox1(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox1(1);
       }
       setgameEnd(false);
       console.log("Win 1st row");
@@ -94,8 +114,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox2(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox2(1);
       }
       setgameEnd(false);
       console.log("Win 2st row");
@@ -109,8 +133,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox3(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox3(1);
       }
       setgameEnd(false);
       console.log("Win 3st row");
@@ -124,8 +152,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox4(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox4(1);
       }
       setgameEnd(false);
       console.log("Win 1st col");
@@ -139,8 +171,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox5(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox5(1);
       }
       setgameEnd(false);
       console.log("Win 2st col");
@@ -154,8 +190,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox6(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox6(1);
       }
       setgameEnd(false);
       console.log("Win 3st rocolw");
@@ -169,8 +209,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox7(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox7(1);
       }
       setgameEnd(false);
       console.log("dia");
@@ -184,8 +228,12 @@ const TicTacToe = () => {
     ) {
       if (gameUserToggle === 2) {
         setWinner(1);
+        playWinAudio();
+        setwinBox8(1);
       } else {
         setWinner(2);
+        playWinAudio();
+        setwinBox8(1);
       }
       setgameEnd(false);
       console.log("dia");
@@ -202,9 +250,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -217,9 +267,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -232,9 +284,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -247,9 +301,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -262,9 +318,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -277,9 +335,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -292,9 +352,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -307,9 +369,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -322,9 +386,11 @@ const TicTacToe = () => {
       if (gameUserToggle === 1) {
         setgameUserToggle(2);
         setStepFlag(flag);
+        setStartAudio(1);
       } else {
         setgameUserToggle(1);
         setStepFlag(flag);
+        setStartAudio(1);
       }
     }
     console.log(stepFlag);
@@ -351,6 +417,15 @@ const TicTacToe = () => {
     setBox9(0);
     setgameUserToggle(1);
     setStepFlag(0);
+    setStartAudio(0);
+    setwinBox1(0);
+    setwinBox2(0);
+    setwinBox3(0);
+    setwinBox4(0);
+    setwinBox5(0);
+    setwinBox6(0);
+    setwinBox7(0);
+    setwinBox8(0);
   }
 
   function modeF() {
@@ -358,9 +433,43 @@ const TicTacToe = () => {
     setUserToggle(0);
     setUser1(0);
     setUser2(0);
+    setwinBox1(0);
+    setwinBox2(0);
+    setwinBox3(0);
+    setwinBox4(0);
+    setwinBox5(0);
+    setwinBox6(0);
+    setwinBox7(0);
+    setwinBox8(0);
+    setBox1(0);
+    setBox2(0);
+    setBox3(0);
+    setBox4(0);
+    setBox5(0);
+    setBox6(0);
+    setBox7(0);
+    setBox8(0);
+    setBox9(0);
   }
   function modeO() {
     setMode(2);
+    setwinBox1(0);
+    setwinBox2(0);
+    setwinBox3(0);
+    setwinBox4(0);
+    setwinBox5(0);
+    setwinBox6(0);
+    setwinBox7(0);
+    setwinBox8(0);
+    setBox1(0);
+    setBox2(0);
+    setBox3(0);
+    setBox4(0);
+    setBox5(0);
+    setBox6(0);
+    setBox7(0);
+    setBox8(0);
+    setBox9(0);
   }
   function toggleIconSelect() {
     if (userToggle === 1) {
@@ -374,6 +483,16 @@ const TicTacToe = () => {
     }
   }
 
+  function playStartAudio() {
+    new Audio(start).play();
+  }
+  function playWinAudio() {
+    new Audio(win).play();
+  }
+  function playDrawAudio() {
+    new Audio(draw).play();
+  }
+
   return (
     <>
       <div className="h-[70px] w-full bg-[#05161a] flex justify-between items-center">
@@ -381,11 +500,13 @@ const TicTacToe = () => {
           <RxHamburgerMenu
             onClick={() => toggleSidebar()}
             className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]"
+            style={{ zIndex: "8" }}
           />
         ) : (
           <RxCross2
             onClick={() => toggleSidebar()}
             className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]"
+            style={{ zIndex: "8" }}
           />
         )}
         <div className="flex">
@@ -395,9 +516,15 @@ const TicTacToe = () => {
         </div>
       </div>
       {sidebar === false ? (
-        <div className="w-0 h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1]"></div>
+        <div
+          className="w-0 h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1]"
+          style={{ zIndex: "6" }}
+        ></div>
       ) : (
-        <div className="w-[250px] h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1]"></div>
+        <div
+          className="w-[250px] h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1]"
+          style={{ zIndex: "6" }}
+        ></div>
       )}
       <div
         className="w-full  bg-[#05161a]"
@@ -456,7 +583,10 @@ const TicTacToe = () => {
 
         {mode === 1 ? (
           <div className="font-['squidgame']  flex flex-col items-center justify-center pt-[20px]">
-            <span className=" h-[30px] text-white font-['squidgame'] flex justify-center items-center">
+            <span
+              className=" h-[30px] text-white font-['squidgame'] flex justify-center items-center"
+              style={{ zIndex: 5 }}
+            >
               {userToggle === 0 ? (
                 <></>
               ) : userToggle === 1 ? (
@@ -611,6 +741,7 @@ const TicTacToe = () => {
 
         {user1 !== 0 && user2 !== 0 && mode === 1 ? (
           <>
+            {startAudio === 0 ? playStartAudio() : <></>}
             <div className="font-['squidgame'] flex justify-center items-center text-white mt-[60px]">
               <div className="text-white w-[122px] flex justify-end items-center text-[14px] lg:text-[16px]">
                 user 1
@@ -633,7 +764,7 @@ const TicTacToe = () => {
                   ></div>
                 )}
               </div>
-              <div className="">
+              <div className="" style={{ zIndex: "3" }}>
                 <div className="flex justify-center items-center">
                   <div
                     className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
@@ -741,7 +872,7 @@ const TicTacToe = () => {
                     )}
                   </div>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center ">
                   <div
                     className="border-[3px] border-[#0f9690] rounded-full m-[4px] w-[50px] h-[50px] bg-transparent shadow-[0px 0px 8px #0c7075] flex justify-center items-center text-white cursor-pointer font-['squidgame']"
                     id="box4"
@@ -978,14 +1109,17 @@ const TicTacToe = () => {
                   <p className="text-[white] mt-[-3px] h-[80px]"></p>
                 </>
               ) : gameEnd === true && stepFlag > 8 ? (
-                <p className="text-[white] mt-[-3px] h-[80px]">
-                  <span className="text-[50px] lg:text-[55px] text-[#0f9690] drop-shadow-[2px_2px_3px_#0c7075]">
-                    draw
-                  </span>{" "}
-                  <span className="text-[20px] mt-[-52px] lg:mt-[-57px] z-[1] tracking-[-1px] text-white drop-shadow-[2px_2px_3px_#0c7075]">
-                    user 1 &nbsp; user 2
-                  </span>
-                </p>
+                <>
+                  {playDrawAudio()}
+                  <p className="text-[white] mt-[-3px] h-[80px]">
+                    <span className="text-[50px] lg:text-[55px] text-[#0f9690] drop-shadow-[2px_2px_3px_#0c7075]">
+                      draw
+                    </span>{" "}
+                    <span className="text-[20px] mt-[-52px] lg:mt-[-57px] z-[1] tracking-[-1px] text-white drop-shadow-[2px_2px_3px_#0c7075]">
+                      user 1 &nbsp; user 2
+                    </span>
+                  </p>
+                </>
               ) : winner === 0 ? (
                 <>
                   <p className="text-[white] mt-[-3px] h-[80px]"></p>
@@ -1014,7 +1148,7 @@ const TicTacToe = () => {
               {gameEnd === true ? (
                 <button
                   className="font-['squidgame'] w-[180px] h-[45px] border-[3px] border-[#0f9690] bg-white text-[black] cursor-pointer hover:bg-[#0f9690] hover:text-[white] "
-                  style={{ transition: ".4s" }}
+                  style={{ transition: ".4s", zIndex: "3" }}
                   onClick={() => reset()}
                 >
                   restart
@@ -1022,7 +1156,7 @@ const TicTacToe = () => {
               ) : (
                 <button
                   className="font-['squidgame'] w-[180px] h-[45px] border-[3px] border-[#0f9690] bg-white text-[black] cursor-pointer  "
-                  style={{ transition: ".4s" }}
+                  style={{ transition: ".4s", zIndex: "3" }}
                   onClick={() => {
                     reset();
                     setgameEnd(true);
@@ -1036,13 +1170,154 @@ const TicTacToe = () => {
         ) : (
           <div className="font-['squidgame'] flex justify-center items-center text-white mt-[60px]"></div>
         )}
+        <div className="flex flex-col justify-center items-center mt-[-293px] ">
+          {winbox1 === 1 ? (
+            <>
+              <div className="h-[58px]">
+                <div
+                  className="w-[180px] border-[1.5px] border-orange-500"
+                  style={{ zIndex: "4" }}
+                ></div>
+              </div>
+              <div className="h-[58px]">
+                <div className="w-[180px] border-0 border-orange-500"></div>
+              </div>
+              <div className="h-[58px]">
+                <div className="w-[180px] border-0 border-orange-500"></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+          {winbox2 === 1 ? (
+            <>
+              <div className="h-[58px]">
+                <div className="w-[180px] border-0 border-orange-500"></div>
+              </div>
+              <div className="h-[58px]" style={{ zIndex: "4" }}>
+                <div
+                  className="w-[180px] border-[1.5px] border-orange-500"
+                  style={{ zIndex: "4" }}
+                ></div>
+              </div>
+              <div className="h-[58px]">
+                <div className="w-[180px] border-0 border-orange-500"></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+          {winbox3 === 1 ? (
+            <>
+              <div className="h-[58px]">
+                <div className="w-[180px] border-0 border-orange-500"></div>
+              </div>
+              <div className="h-[58px]">
+                <div className="w-[180px] border-0 border-orange-500"></div>
+              </div>
+              <div className="h-[58px]" style={{ zIndex: "4" }}>
+                <div className="w-[180px] border-[1.5px] border-orange-500"></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
+        <div className="flex justify-center items-center mt-[-31px] z-[-3]">
+          {winbox4 === 1 ? (
+            <>
+              <div
+                className="w-[58px] flex justify-center items-center"
+                style={{ zIndex: "4" }}
+              >
+                <div className="h-[180px] w-0 border-[1.5px] border-orange-500"></div>
+              </div>
+              <div className="w-[58px] flex justify-center items-center">
+                <div className="h-[180px] w-0 border-0 border-orange-500"></div>
+              </div>
+              <div className="w-[58px] flex justify-center items-center">
+                <div className="h-[180px] w-0 border-0 border-orange-500"></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+          {winbox5 === 1 ? (
+            <>
+              <div className="w-[58px] flex justify-center items-center">
+                <div className="h-[180px] w-0 border-0 border-orange-500"></div>
+              </div>
+              <div
+                className="w-[58px] flex justify-center items-center"
+                style={{ zIndex: "4" }}
+              >
+                <div className="h-[180px] w-0 border-[1.5px] border-orange-500"></div>
+              </div>
+              <div className="w-[58px] flex justify-center items-center">
+                <div className="h-[180px] w-0 border-0 border-orange-500"></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+          {winbox6 === 1 ? (
+            <>
+              <div className="w-[58px] flex justify-center items-center">
+                <div className="h-[180px] w-0 border-0 border-orange-500"></div>
+              </div>
+              <div className="w-[58px] flex justify-center items-center">
+                <div className="h-[180px] w-0 border-0 border-orange-500"></div>
+              </div>
+              <div
+                className="w-[58px] flex justify-center items-center"
+                style={{ zIndex: "4" }}
+              >
+                <div className="h-[180px] w-0 border-[1.5px] border-orange-500"></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
+        <div className="flex justify-center items-center mt-[-25px] z-[-3]">
+          {winbox8 === 1 ? (
+            <>
+              <div
+                className="w-[58px] flex justify-center items-center origin-center rotate-45"
+                style={{ zIndex: "4" }}
+              >
+                <div
+                  className="h-[230px] w-0 border-[1.5px] border-orange-500 "
+                  style={{ zIndex: "4" }}
+                ></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+          {winbox7 === 1 ? (
+            <>
+              <div
+                className="w-[58px] flex justify-center items-center origin-center -rotate-45"
+                style={{ zIndex: "4" }}
+              >
+                <div
+                  className="h-[230px] w-0 border-[1.5px] border-orange-500 "
+                  style={{ zIndex: "4" }}
+                ></div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
 
-        <div className="flex justify-center items-center w-full mt-[25px]">
+        {/* <div className="flex justify-center items-center w-full mt-[25px]">
           <BiLogoInstagram className="text-[white] text-[25px] lg:text-[30px] mx-[10px]" />
           <BiLogoFacebookSquare className="text-[white] text-[24px] lg:text-[28px] mx-[10px]" />
           <FaTwitterSquare className="text-[white] text-[22px] lg:text-[26px] mx-[10px]" />
-          {/* <FaSquareXTwitter /> */}
-        </div>
+
+        </div> */}
       </div>
 
       {/* <div
