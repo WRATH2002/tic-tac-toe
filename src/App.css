@@ -76,3 +76,11 @@ span {
   align-items: center;
   width: 100%;
 }
+
+.dark-mode {
+  background-color: #fff;
+}
+.colorone {
+  color: black;
+  /* text-shadow: 2px 2px 3px #000000; */
+}
