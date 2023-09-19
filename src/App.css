@@ -79,8 +79,10 @@ span {
 
 .dark-mode {
   background-color: #fff;
+  color: black;
+  text-shadow: none;
 }
-.colorone {
+.textColor {
   color: black;
   /* text-shadow: 2px 2px 3px #000000; */
 }

@@ -75,6 +75,9 @@ const TicTacToe = () => {
   //
   const [winner, setWinner] = useState(0);
 
+  //
+  const [darkMode, setDarkMode] = useState(false);
+
   function User1(flag) {
     setUser1(flag);
     // setUserToggle(2);
@@ -674,34 +677,10 @@ const TicTacToe = () => {
     setpcFlag(1);
   }
 
-  function myFunction() {
-    // var element_one = document.getElementById("body_one");
-    // var element_two = document.getElementById("body_two");
-    // var text_one = document.getElementById("text_one");
-    // var text_two = document.getElementById("text_two");
-    // var text_three = document.getElementById("text_three");
-    // var text_four = document.getElementById("text_four");
-    // var text_five = document.getElementById("text_five");
-    // var text_six = document.getElementById("text_six");
-    // var text_seven = document.getElementById("text_seven");
-    // var text_eight = document.getElementById("text_eight");
-    // var text_nine = document.getElementById("text_nine");
-    // var text_ten = document.getElementById("text_ten");
-    // var text_eleven = document.getElementById("text_eleven");
-    // element_one.classList.toggle("dark-mode");
-    // element_two.classList.toggle("dark-mode");
-    // text_one.classList.toggle("colorone");
-    // text_two.classList.toggle("colorone");
-    // text_three.classList.toggle("colorone");
-    // text_four.classList.toggle("colorone");
-    // text_five.classList.toggle("colorone");
-    // text_six.classList.toggle("colorone");
-    // text_seven.classList.toggle("colorone");
-    // text_eight.classList.toggle("colorone");
-    // text_nine.classList.toggle("colorone");
-    // text_ten.classList.toggle("colorone");
-    // text_eleven.classList.toggle("colorone");
+  function toggleDark() {
+    setDarkMode(true);
   }
+  function toggleLight() {}
 
   return (
     <>
@@ -724,11 +703,17 @@ const TicTacToe = () => {
         )}
         <div className="flex">
           <MdAccountCircle className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]" />
-          <MdDarkMode className="text-[20px] lg:text-[30px] text-white ml-[25px] cursor-pointer z-[3]" />
-          <PiSunDimFill
-            onClick={() => myFunction()}
-            className="text-[20px] lg:text-[30px] text-white ml-[25px] mr-[25px] cursor-pointer z-[3]"
-          />
+          {darkMode === false ? (
+            <MdDarkMode
+              onClick={() => toggleDark()}
+              className="text-[20px] lg:text-[30px] text-white ml-[25px] mr-[25px] cursor-pointer z-[3]"
+            />
+          ) : (
+            <PiSunDimFill
+              onClick={() => toggleLight()}
+              className="text-[20px] lg:text-[30px] text-white ml-[25px] mr-[25px] cursor-pointer z-[3]"
+            />
+          )}
         </div>
       </div>
       {sidebar === false ? (
@@ -738,9 +723,32 @@ const TicTacToe = () => {
         ></div>
       ) : (
         <div
-          className="w-[250px] h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1]"
+          className="w-[250px] h-[100vh] bg-[#072e33] fixed transition-[.5s] ease-in-out mt-[-70px] z-[1] flex flex-col justify-around items-center"
           style={{ zIndex: "6" }}
-        ></div>
+        >
+          <div>
+            <span className="font-['squidgame'] text-white w-[135px] cursor-pointer my-[10px] flex justify-start h-[30px] text-[14px] lg:text-[16px]">
+              Home
+            </span>
+            <span className="font-['squidgame'] text-white w-[135px] cursor-pointer my-[10px] flex justify-start h-[30px] text-[14px] lg:text-[16px]">
+              About
+            </span>
+            <span className="font-['squidgame'] text-white w-[135px] cursor-pointer my-[10px] flex justify-start h-[30px] text-[14px] lg:text-[16px]">
+              Help
+            </span>
+            <span className="font-['squidgame'] text-white w-[135px] cursor-pointer my-[10px] flex justify-start h-[30px] text-[14px] lg:text-[16px]">
+              How to Play
+            </span>
+          </div>
+          <div className="flex flex-col justify-center items-center w-full mt-[25px]">
+            <div className="flex justify-center items-center">
+              <BiLogoInstagram className="text-[white] text-[25px] lg:text-[30px] mx-[10px]" />
+              <BiLogoFacebookSquare className="text-[white] text-[24px] lg:text-[28px] mx-[10px]" />
+              <FaTwitterSquare className="text-[white] text-[22px] lg:text-[26px] mx-[10px]" />
+            </div>
+            <span>...</span>
+          </div>
+        </div>
       )}
       <div
         id="body_two"
@@ -767,7 +775,7 @@ const TicTacToe = () => {
             <span
               id="text_two"
               onClick={() => modeF()}
-              className="w-[85px] mx-[10px] cursor-pointer flex flex-col items-center drop-shadow-[2px_2px_3px_#0c7075] text-[14px] lg:text-[16px]"
+              className=" w-[85px] mx-[10px] cursor-pointer flex flex-col items-center drop-shadow-[2px_2px_3px_#0c7075] text-[14px] lg:text-[16px]"
             >
               friend
               {mode === 1 ? (
@@ -785,7 +793,7 @@ const TicTacToe = () => {
             <span
               id="text_three"
               onClick={() => modeO()}
-              className="w-[85px] mx-10px cursor-pointer text-[14px] lg:text-[16px] flex flex-col items-center drop-shadow-[2px_2px_3px_#0c7075]"
+              className="w-[85px] mx-[10px] cursor-pointer text-[14px] lg:text-[16px] flex flex-col items-center drop-shadow-[2px_2px_3px_#0c7075]"
             >
               online
               {mode === 2 ? (
